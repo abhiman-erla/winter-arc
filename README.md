@@ -1,6 +1,6 @@
 # Winter Arc
 
-**🔗 Live app: [abhiman-06.github.io/winter-arc](https://abhiman-06.github.io/winter-arc/)**
+**🔗 Live app: [abhiman-erla.github.io/winter-arc](https://abhiman-erla.github.io/winter-arc/)**
 
 A dark, offline-first tracker for a **one-year arc**: daily habits on a month grid,
 a weekly task board with a mindset tracker, 1-year goals across ten areas of life,
@@ -12,7 +12,7 @@ No accounts, no sign-up, no server to run. Everything lives in your own browser.
 
 ## If someone sent you this link
 
-Just open **[abhiman-06.github.io/winter-arc](https://abhiman-06.github.io/winter-arc/)**
+Just open **[abhiman-erla.github.io/winter-arc](https://abhiman-erla.github.io/winter-arc/)**
 — that's it, the app is right there. A few things worth knowing:
 
 - **Your data is separate from theirs.** Nothing is shared between people who open
@@ -31,7 +31,7 @@ Everything past this point is for whoever is running or changing the project.
 ## Four ways to run it
 
 ### 1. Just open the live link
-**[abhiman-06.github.io/winter-arc](https://abhiman-06.github.io/winter-arc/)** —
+**[abhiman-erla.github.io/winter-arc](https://abhiman-erla.github.io/winter-arc/)** —
 nothing to install, works on any device with a browser. This is what to send people.
 
 ### 2. As a website on your own PC
