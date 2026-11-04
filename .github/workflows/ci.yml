@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+permissions:
+  contents: read
+
+jobs:
+  secrets-scan:
+    uses: abhiman-erla/ci-templates/.github/workflows/secret-scan.yml@11abec65f0c86a0f95e32250f9656c4cbd628b1f # v1.2.0
+
+  workflow-lint:
+    uses: abhiman-erla/ci-templates/.github/workflows/workflow-lint.yml@11abec65f0c86a0f95e32250f9656c4cbd628b1f # v1.2.0
+
+  node:
+    uses: abhiman-erla/ci-templates/.github/workflows/node-ci.yml@11abec65f0c86a0f95e32250f9656c4cbd628b1f # v1.2.0
+    with:
+      # No dependencies and no lockfile: nothing to install or audit.
+      install-command: ''
+      audit: false
+      test-command: npm test && npm run build
+
+  ci-ok:
+    if: always()
+    needs: [secrets-scan, workflow-lint, node]
+    runs-on: ubuntu-latest
+    permissions: {}
+    steps:
+      - uses: re-actors/alls-green@b5b5b37504aa4183270bd3d855c52a67f212be35 # v1.3.0
+        with:
+          jobs: ${{ toJSON(needs) }}

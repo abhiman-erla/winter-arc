@@ -1,0 +1,11 @@
+# github-actions only: package.json has no dependencies and there is no
+# lockfile, so there is nothing for the npm ecosystem to update.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      github-actions:
+        patterns: ["*"]
