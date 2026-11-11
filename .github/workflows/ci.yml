@@ -14,13 +14,13 @@ permissions:
 
 jobs:
   secrets-scan:
-    uses: abhiman-erla/ci-templates/.github/workflows/secret-scan.yml@11abec65f0c86a0f95e32250f9656c4cbd628b1f # v1.2.0
+    uses: abhiman-erla/ci-templates/.github/workflows/secret-scan.yml@590537b0bf92f11c36470b118c6e18410cce5d74 # v1.4.0
 
   workflow-lint:
-    uses: abhiman-erla/ci-templates/.github/workflows/workflow-lint.yml@11abec65f0c86a0f95e32250f9656c4cbd628b1f # v1.2.0
+    uses: abhiman-erla/ci-templates/.github/workflows/workflow-lint.yml@590537b0bf92f11c36470b118c6e18410cce5d74 # v1.4.0
 
   node:
-    uses: abhiman-erla/ci-templates/.github/workflows/node-ci.yml@11abec65f0c86a0f95e32250f9656c4cbd628b1f # v1.2.0
+    uses: abhiman-erla/ci-templates/.github/workflows/node-ci.yml@590537b0bf92f11c36470b118c6e18410cce5d74 # v1.4.0
     with:
       # No dependencies and no lockfile: nothing to install or audit.
       install-command: ''
